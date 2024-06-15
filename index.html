@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Rainbow Smoothie (Smooth Scrolling #CodePenChallenge)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Smoothie</title>
+  <!-- Summer is approaching, and the June #CodePenChallenge has just kicked off! So why not celebrate with a
+  (smoothly) scrollable rainbow smoothie? The recipe is refreshingly easy: vibrant colors, healthy ingredients, positive vibes, and, of course, smooth scrolling! Plus, it's a great opportunity to experiment with Scrollspy :)
+  | CodePen Challenge, June 2024, "Smooth Scrolling" -->
+</head>
+
+<body>
+  <header id="header">
+    <div class="page-title">
+      <h1>Rainbow Smoothie</h1>
+    </div>
+  </header>
+  <main>
+    <nav id="navbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link emoji" href="#purple" aria-label="blueberries">🫐</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link emoji" href="#green" aria-label="kiwi">🥝</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link emoji" href="#yellow" aria-label="banana">🍌</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link emoji" href="#orange" aria-label="orange">🍊</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link emoji" href="#red" aria-label="watermelon">🍉</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="smoothie">
+      <div id="straw"></div>
+      <div data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0" class="scrollspy glass">
+        <div id="purple" class="layer">
+          <div class="info">
+            <h4>Blueberries</h4>
+            <p>(rich in antioxidants)</p>
+          </div>
+        </div>
+        <div id="green" class="layer">
+          <div class="info">
+            <h4>Kiwi</h4>
+            <p>(source of fiber)</p>
+          </div>
+        </div>
+        <div id="yellow" class="layer">
+          <div class="info">
+            <h4>Banana</h4>
+            <p>(high in potassium)</p>
+          </div>
+        </div>
+        <div id="orange" class="layer">
+          <div class="info">
+            <h4>Orange</h4>
+            <p>(for Vitamin C)</p>
+          </div>
+        </div>
+        <div id="red" class="layer">
+          <div class="info">
+            <h4>Watermelon</h4>
+            <p>(high water content)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="backtop">
+      <a class="backtop-link emoji" href="#header" aria-label="backtop">👆</a>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="page-bottom">
+      <p>Thanks for scrolling!</p>
+      <p class="grey">#cpc-smooth-scrolling</p>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
