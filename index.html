@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Structuralism Slides</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -41,32 +37,40 @@
     }
 
     @keyframes fadeSlide {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .text-container {
       position: absolute;
-      top: 20%;
+      top: 15%;
       left: 10%;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      max-width: 60%;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
 
     .slide h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
     .slide p {
       font-size: 1.2rem;
       color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
     }
 
     .nav-button {
@@ -87,51 +91,58 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
 
-    .nav-left {
-      left: 10px;
-    }
-
-    .nav-right {
-      right: 10px;
-    }
+    .nav-left { left: 10px; }
+    .nav-right { right: 10px; }
 
     @media (max-width: 768px) {
-      .slide h1 {
-        font-size: 2rem;
-      }
-
-      .slide p {
-        font-size: 1rem;
-      }
-
-      .nav-button {
-        padding: 10px;
-        font-size: 1.5rem;
-      }
+      .slide h1 { font-size: 2rem; }
+      .slide p, li { font-size: 1rem; }
+      .nav-button { padding: 10px; font-size: 1.5rem; }
+      .text-container { max-width: 80%; }
     }
   </style>
 </head>
 <body>
   <div class="slideshow-container">
-    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1601582584282-964aa7e8703f');">
+
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b');">
       <div class="text-container">
         <h1>What is Structuralism?</h1>
         <p>By Ayaan & Ved</p>
+        <ul>
+          <li>It’s about finding hidden systems in meaning</li>
+          <li>Everything works as part of a bigger structure</li>
+          <li>Used in language, culture, and stories</li>
+        </ul>
       </div>
     </div>
 
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1627843563095-1cde0470f738');">
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c');">
       <div class="text-container">
         <h1>Patterns in Culture & Language</h1>
+        <ul>
+          <li>We think in opposites: good vs bad, life vs death</li>
+          <li>Myths and language follow patterns</li>
+          <li>Ferdinand de Saussure started this idea</li>
+        </ul>
       </div>
     </div>
 
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e');">
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581092787768-3e83ba1b41c4');">
       <div class="text-container">
         <h1>Hidden Structures Shape Us</h1>
+        <ul>
+          <li>We don’t always see the systems around us</li>
+          <li>They shape how we speak, think, and live</li>
+          <li>Structuralism helps us look deeper</li>
+        </ul>
       </div>
     </div>
 
+    <!-- Navigation buttons -->
     <button class="nav-button nav-left" onclick="changeSlide(-1)">&#8592;</button>
     <button class="nav-button nav-right" onclick="changeSlide(1)">&#8594;</button>
   </div>
@@ -148,3 +159,4 @@
   </script>
 </body>
 </html>
+
