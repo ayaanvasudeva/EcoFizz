@@ -1,106 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>EcoFizz</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Summer is approaching, and the June #CodePenChallenge has just kicked off! So why not celebrate with a
-  (smoothly) scrollable rainbow smoothie? The recipe is refreshingly easy: vibrant colors, healthy ingredients, positive vibes, and, of course, smooth scrolling! Plus, it's a great opportunity to experiment with Scrollspy :)
-  | CodePen Challenge, June 2024, "Smooth Scrolling" -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structuralism Slides</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+      overflow: hidden;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 0.8s ease;
+    }
+
+    .slide.active {
+      display: block;
+      animation: fadeSlide 1s ease;
+    }
+
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .text-container {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .slide h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .slide p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 2rem;
+      color: white;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .nav-left {
+      left: 10px;
+    }
+
+    .nav-right {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .slide h1 {
+        font-size: 2rem;
+      }
+
+      .slide p {
+        font-size: 1rem;
+      }
+
+      .nav-button {
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <header id="header">
-    <div class="page-title">
-      <h1>EcoFizz</h1>
-      <h4>“Gives you rizz”</h4>
-    </div>
-  </header>
-  <main>
-    <nav id="navbar">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link emoji" href="#purple" aria-label="blueberries">🫐</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link emoji" href="#green" aria-label="kiwi">🥝</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link emoji" href="#yellow" aria-label="banana">🍌</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link emoji" href="#orange" aria-label="orange">🍊</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link emoji" href="#red" aria-label="watermelon">🍉</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="smoothie">
-      <div id="straw"></div>
-      <div data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0" class="scrollspy glass">
-        <div id="purple" class="layer">
-          <div class="info">
-            <h1>EcoFizz</h1>
-            <p>By Ayaan V, Aayush and Tristan</p>
-          </div>
-        </div>
-        <div id="green" class="layer">
-          <div class="info">
-            <h1>Promo Video (EcoFizz):</h1>
-            <a href = "https://sites.google.com/view/ecofizz-video?usp=sharing" target=”_blank”>Link</a>
-          </div>
-        </div>
-        <div id="yellow" class="layer">
-          <div class="info">
-            <h1>Promo Video (junior ball):</h1>
-            <a href = "https://sites.google.com/view/juniorballvideo?usp=sharing" target=”_blank”>Link</a>
-
-          </div>
-        </div>
-        <div id="orange" class="layer">
-          <div class="info">
-          <img width = "200px" src = "Ecofizz.png">
-          <img width = "300px"src = "AayushBall.png">
-          <img width = "300px"src = "AyaanBall.png">
-          <img width = "300px"src = "TristanBall.png">
-            
-          </div>
-          
-        </div>
-        <div id="red" class="layer">
-          <div class="info">
-     <img src = "CanEcoFizz.png">
-
-        <h3>The end</h3>
-          </div>
-        </div>
+  <div class="slideshow-container">
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1601582584282-964aa7e8703f');">
+      <div class="text-container">
+        <h1>What is Structuralism?</h1>
+        <p>By Ayaan & Ved</p>
       </div>
     </div>
-    <div id="backtop">
-      <a class="backtop-link emoji" href="#header" aria-label="backtop">👆</a>
-    </div>
-  </main>
-  <footer id="footer">
-    <div class="page-bottom">
-      <p>Go to the top</p>
-      <p class="grey">#EcoFizz #Junior Ball</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
 
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1627843563095-1cde0470f738');">
+      <div class="text-container">
+        <h1>Patterns in Culture & Language</h1>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e');">
+      <div class="text-container">
+        <h1>Hidden Structures Shape Us</h1>
+      </div>
+    </div>
+
+    <button class="nav-button nav-left" onclick="changeSlide(-1)">&#8592;</button>
+    <button class="nav-button nav-right" onclick="changeSlide(1)">&#8594;</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
 </body>
 </html>
